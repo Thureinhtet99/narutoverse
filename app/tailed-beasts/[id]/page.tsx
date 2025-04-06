@@ -297,28 +297,28 @@ export default function TailedBeastDetail() {
           )}
 
           {/* Voice Actors */}
-          {beast.voice_actors && (
+          {beast.voiceActors && (
             <div className="mb-10">
               <h3 className="text-lg font-semibold text-orange-400 mb-2">
                 Voice Actors
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
-                {beast.voice_actors.japanese && (
+                {beast.voiceActors.japanese && (
                   <div className="flex flex-col">
                     <span className="text-gray-400 text-sm">Japanese</span>
                     <span className="text-white">
-                      {beast.voice_actors.japanese}
+                      {beast.voiceActors.japanese}
                     </span>
                   </div>
                 )}
-                {beast.voice_actors.english && (
+                {beast.voiceActors.english && (
                   <div className="flex flex-col">
                     <span className="text-gray-400 text-sm">English</span>
                     <span className="text-white">
-                      {typeof beast.voice_actors.english === "string"
-                        ? beast.voice_actors.english
-                        : Array.isArray(beast.voice_actors.english)
-                        ? beast.voice_actors.english.join(", ")
+                      {typeof beast.voiceActors.english === "string"
+                        ? beast.voiceActors.english
+                        : Array.isArray(beast.voiceActors.english)
+                        ? beast.voiceActors.english.join(", ")
                         : "Unknown"}
                     </span>
                   </div>
