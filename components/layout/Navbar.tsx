@@ -12,24 +12,26 @@ import {
   Mountain,
   PenTool,
   Skull,
-  Zap,
-  Droplet,
+  // Zap,
+  // Droplet,
   Flame,
+  ShieldUser,
 } from "lucide-react";
+import defaultImage from "@/public/images/default-image.webp";
 
 const navLinks = [
   { name: "Characters", href: "/characters", icon: <Users size={16} /> },
-  { name: "Clans", href: "/clans", icon: <Users size={16} /> },
+  { name: "Clans", href: "/clans", icon: <ShieldUser size={16} /> },
   { name: "Villages", href: "/villages", icon: <Mountain size={16} /> },
   { name: "Teams", href: "/teams", icon: <PenTool size={16} /> },
   { name: "Akatsuki", href: "/akatsuki", icon: <Skull size={16} /> },
-  { name: "Kara", href: "/kara", icon: <Zap size={16} /> },
-  {
-    name: "Kekkei Genkai",
-    href: "/kekkei-genkai",
-    icon: <Droplet size={16} />,
-  },
   { name: "Tailed Beasts", href: "/tailed-beasts", icon: <Flame size={16} /> },
+  // { name: "Kara", href: "/kara", icon: <Zap size={16} /> },
+  // {
+  //   name: "Kekkei Genkai",
+  //   href: "/kekkei-genkai",
+  //   icon: <Droplet size={16} />,
+  // },
 ];
 
 export default function Navbar() {
@@ -38,17 +40,17 @@ export default function Navbar() {
 
   return (
     <nav className="border-b sticky top-0 z-40 backdrop-blur-sm bg-gradient-to-r from-orange-100 to-orange-50 dark:from-gray-900 dark:to-gray-950 shadow-sm px-4">
-      <div className="absolute inset-0 bg-[url('/subtle-pattern.png')] opacity-5 dark:opacity-10"></div>
       <div className="container max-w-7xl mx-auto flex h-16 items-center justify-between relative z-10">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-orange-500 dark:border-orange-400 transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:shadow-orange-300/50 dark:group-hover:shadow-orange-600/30">
               <Image
-                src="/naruto-logo.png"
+                src={defaultImage}
                 alt="Narutoverse Logo"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
             <span className="font-bold text-xl hidden sm:inline-block text-orange-600 dark:text-orange-400 group-hover:text-orange-500 dark:group-hover:text-orange-300 transition-colors">

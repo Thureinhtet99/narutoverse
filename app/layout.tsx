@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/layout/theme-provider";
+import Navbar from "@/components/layout/Navbar";
+import QueryProvider from "@/components/layout/QueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,12 +24,14 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          // disableTransitionOnChange
         >
-          <div className="min-h-screen">
-            <Navbar />
-            <div className="container p-10 space-y-8">{children}</div>
-          </div>
+          <QueryProvider>
+            <div className="min-h-screen">
+              <Navbar />
+              <div className="container py-10 px-6 space-y-8">{children}</div>
+            </div>
+          </QueryProvider>
         </ThemeProvider>
       </body>
     </html>

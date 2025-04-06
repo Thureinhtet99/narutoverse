@@ -13,4 +13,10 @@ export const API_CONFIG = {
   TEAMS: {
     GET: "/teams",
   },
+  AKATSUKI: {
+    GET: "/akatsuki",
+  },
+  TAILED_BEASTS: {
+    GET: "/tailed-beasts",
+  },
 };

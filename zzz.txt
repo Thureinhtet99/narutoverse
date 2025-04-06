@@ -1,0 +1,11 @@
+ placeholder={`Search for ${
+                pathname === "/" ? "characters" : pathname.slice(1)
+              }....`}
+
+
+
+export type ClanType = {
+  id: number;
+  name: string;
+  characters?: CharacterType[];
+};
