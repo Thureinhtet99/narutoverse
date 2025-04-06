@@ -12,12 +12,10 @@ import {
   Mountain,
   PenTool,
   Skull,
-  // Zap,
-  // Droplet,
   Flame,
   ShieldUser,
 } from "lucide-react";
-import defaultImage from "@/public/images/default-image.webp";
+import narutoLogo from "@/public/images/naruto-logo.png";
 
 const navLinks = [
   { name: "Characters", href: "/characters", icon: <Users size={16} /> },
@@ -46,7 +44,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-orange-500 dark:border-orange-400 transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:shadow-orange-300/50 dark:group-hover:shadow-orange-600/30">
               <Image
-                src={defaultImage}
+                src={narutoLogo}
                 alt="Narutoverse Logo"
                 fill
                 className="object-cover"
